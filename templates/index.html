@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>index</title>
-</head>
-<body>
-  <h1>Pagina index</h1>
-  <p>Hello, Flask!</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block titolo %}
+Home
+{% endblock %}
+
+{% block intestazione %}Home page{% endblock %}
+{% block corpo %}
+{{ message }}
+<h2><a href="{{url_for('user')}}">Utenti</a></h2>
+{% endblock %}
